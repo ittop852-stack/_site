@@ -1,132 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap');
-
-h1, h2, h3, h4, h5 {
-font-family: ‘Open Sans’, sans-serif;
-font-weight: 600;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-p {
-font-family: ‘Roboto’, sans-serif;
-font-weight: 300;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-a {
-font-family: ‘Open Sans’, sans-serif;
-font-weight: 600;
-letter-spacing: 2px;
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-
-header, footer {
-  background-color: #9debf5;
-  padding: 10px;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-#menu1{
-position: relative;
-display: block;
-width: 100%;
-height: auto;
-z-index: 10;
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-#menu1 ul{
-position: relative;
-display: block;
-margin: 0px;
-padding: 0px;
-width: 100%;
-height: auto;
-list-style: none;
+#cityInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-#menu1 > ul::after{
-display: block;
-width: 100%;
-height: 0px;
-clear: both;
-content: " ";
+#searchBtn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-#menu1 ul li{
-position: relative;
-display: block;
-float: left;
-width: auto;
-height: auto;
+#searchBtn:hover {
+    background-color: #0056b3;
 }
 
-#menu1 ul li a{
-display: block;
-padding: 9px 25px 0px 25px;
-font-size: 14px;
-line-height: 1.3em;
-text-decoration: none;
-font-weight: bold;
-text-transform: uppercase;
-height: 36px;
-box-sizing: border-box;
-  
-color: white;
+.weather-info {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    min-height: 150px;
 }
 
-#menu1 ul li ul{
-position: absolute;
-top: 36px;
-left: 0px;
-display: none;
-width: 200px;
-  box-shadow: 10px 10px 15px 0px;
-background: #9debf5;
+.weather-info p {
+    margin: 15px 0;
+    color: #555;
+    font-size: 18px;
 }
 
-#menu1 ul li:hover ul{
-display: block;
+.temp {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e74c3c;
 }
 
-
-#menu1 ul li ul li{
-float: none;
-width: 100%;
-}
-
-#menu1 ul li ul li a{
-display: block;
-text-transform: none;
-height: auto;
-padding: 7px 25px;
-width: 100%;
-box-sizing: border-box;
-border-top: 1px solid #ffffff;
-color: white;
-}
-
-#menu1 ul li ul li:first-child a{
-border-top: 0px;
-}
-
-main {
-  padding: 10px;
-  background-color: silver;
-}
-
-.post {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-}
-
-.post img {
-  margin: 20px;
-}
-
-.footer-columns {
-  display: flex;
-}
-
-.footer-column {
-  flex: 50%;
-  margin: 20px;
+.city {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
